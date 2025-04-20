@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - Virtual Assistant</title>
+    <link rel="shortcut icon" href="avtar.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="video-container">
+            <div class="video">
+                <video id="robotVideo" src="3d.mp4" alt="video" autoplay loop muted></video>
+            </div>
+            <h1>J A R V I S f.0</h1>
+            <p>I'm a Virtual Assistant JARVIS, How may I help you?</p>
+        </div>
+        <div class="input">
+            <button class="talk" onclick="startListening()"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content"> Click here to speak</h1>
+        </div>
+    </section>
+    <script src="app.js"></script>
+    <script>
+        // Example of a function that could be called when clicking the button
+        function startListening() {
+            console.log("Listening for commands...");
+            // Here you can integrate speech recognition or other functionalities.
+        }
+
+        // Example: Trigger actions based on video time
+        const video = document.getElementById('robotVideo');
+        video.addEventListener('timeupdate', () => {
+            if (video.currentTime >= 5 && video.currentTime < 6) {
+                console.log("Robot is doing action A");
+                // Add code for action A
+            }
+            // Add more conditions for different actions based on time
+        });
+    </script>
+</body>
+
+</html>
